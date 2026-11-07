@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="chartBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <!-- Bar Gradients -->
+    <linearGradient id="barLR" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="barNB" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <linearGradient id="barSVM" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 22px; font-weight: 800; fill: #ffffff; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; fill: #94a3b8; }
+    .model-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 700; fill: #f1f5f9; }
+    .metric-name { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; fill: #94a3b8; }
+    .val-text { font-family: 'Consolas', 'Courier New', monospace; font-size: 12.5px; font-weight: 700; fill: #ffffff; }
+    .grid-text { font-family: 'Consolas', 'Courier New', monospace; font-size: 11px; fill: #64748b; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1000" height="420" fill="url(#chartBg)"/>
+  <rect x="1" y="1" width="998" height="418" fill="none" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Title & Subtitle -->
+  <g transform="translate(45, 35)">
+    <text x="0" y="0" class="title">Official Model Evaluation Benchmark</text>
+    <text x="0" y="22" class="subtitle">Stratified test-split metrics across 3 classifiers trained on normalized tweet corpus.</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(680, 25)">
+    <circle cx="10" cy="10" r="5" fill="#38bdf8"/>
+    <text x="22" y="14" font-family="sans-serif" font-size="12" fill="#e2e8f0">Accuracy</text>
+
+    <circle cx="110" cy="10" r="5" fill="#a855f7"/>
+    <text x="122" y="14" font-family="sans-serif" font-size="12" fill="#e2e8f0">Macro F1</text>
+
+    <circle cx="210" cy="10" r="5" fill="#34d399"/>
+    <text x="222" y="14" font-family="sans-serif" font-size="12" fill="#e2e8f0">Precision</text>
+  </g>
+
+  <!-- Chart Canvas Area (x: 230 to 920, width: 690) -->
+  <g transform="translate(0, 95)">
+    <!-- Vertical Grid Lines (50% to 100%) -->
+    <!-- 50%: x=230, 60%: x=368, 70%: x=506, 80%: x=644, 90%: x=782, 100%: x=920 -->
+    <g stroke="#334155" stroke-width="1" opacity="0.3">
+      <line x1="230" y1="0" x2="230" y2="280"/>
+      <line x1="368" y1="0" x2="368" y2="280"/>
+      <line x1="506" y1="0" x2="506" y2="280"/>
+      <line x1="644" y1="0" x2="644" y2="280"/>
+      <line x1="782" y1="0" x2="782" y2="280"/>
+      <line x1="920" y1="0" x2="920" y2="280"/>
+    </g>
+    <!-- Axis Labels -->
+    <text x="220" y="298" class="grid-text">50%</text>
+    <text x="358" y="298" class="grid-text">60%</text>
+    <text x="496" y="298" class="grid-text">70%</text>
+    <text x="634" y="298" class="grid-text">80%</text>
+    <text x="772" y="298" class="grid-text">90%</text>
+    <text x="905" y="298" class="grid-text">100%</text>
+
+    <!-- MODEL 1: Logistic Regression -->
+    <g transform="translate(45, 10)">
+      <text x="0" y="22" class="model-label">Logistic Regression</text>
+      <text x="0" y="40" class="metric-name">Balanced C=1.5 L2</text>
+
+      <!-- Bar: Accuracy (78.33%) -> width = (78.33-50)/50 * 690 = 28.33 * 13.8 = 391 px -->
+      <rect x="185" y="6" width="391" height="22" rx="4" fill="url(#barLR)"/>
+      <text x="585" y="22" class="val-text">78.33% Acc</text>
+
+      <!-- Bar: F1-Score (77.97%) -> width = 27.97 * 13.8 = 386 px -->
+      <rect x="185" y="34" width="386" height="18" rx="4" fill="url(#barNB)"/>
+      <text x="580" y="48" class="val-text" font-size="11.5">77.97% F1</text>
+    </g>
+
+    <!-- Separator Line -->
+    <line x1="45" y1="85" x2="950" y2="85" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- MODEL 2: Multinomial Naive Bayes -->
+    <g transform="translate(45, 95)">
+      <text x="0" y="22" class="model-label">Multinomial Naive Bayes</text>
+      <text x="0" y="40" class="metric-name">Laplace alpha=0.3</text>
+
+      <!-- Bar: Accuracy (78.33%) -> width = 391 px -->
+      <rect x="185" y="6" width="391" height="22" rx="4" fill="url(#barLR)"/>
+      <text x="585" y="22" class="val-text">78.33% Acc</text>
+
+      <!-- Bar: F1-Score (77.88%) -> width = 27.88 * 13.8 = 385 px -->
+      <rect x="185" y="34" width="385" height="18" rx="4" fill="url(#barNB)"/>
+      <text x="578" y="48" class="val-text" font-size="11.5">77.88% F1</text>
+    </g>
+
+    <!-- Separator Line -->
+    <line x1="45" y1="170" x2="950" y2="170" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- MODEL 3: Linear Support Vector Machine -->
+    <g transform="translate(45, 180)">
+      <text x="0" y="22" class="model-label">Support Vector Machine</text>
+      <text x="0" y="40" class="metric-name">Linear SVC + Platt</text>
+
+      <!-- Bar: Accuracy (76.67%) -> width = 26.67 * 13.8 = 368 px -->
+      <rect x="185" y="6" width="368" height="22" rx="4" fill="url(#barSVM)"/>
+      <text x="562" y="22" class="val-text">76.67% Acc</text>
+
+      <!-- Bar: F1-Score (76.57%) -> width = 26.57 * 13.8 = 366 px -->
+      <rect x="185" y="34" width="366" height="18" rx="4" fill="url(#barNB)"/>
+      <text x="560" y="48" class="val-text" font-size="11.5">76.57% F1</text>
+    </g>
+  </g>
+</svg>

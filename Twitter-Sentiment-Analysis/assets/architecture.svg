@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#060911"/>
+    </linearGradient>
+
+    <!-- Block Gradients -->
+    <linearGradient id="gradInput" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="gradPreproc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="gradModels" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="gradModules" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="gradUI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#be185d" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Arrow Marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <style>
+    .header-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 26px; font-weight: 800; fill: #ffffff; }
+    .header-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; fill: #94a3b8; }
+    .col-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .box-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 700; fill: #f8fafc; }
+    .box-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.5px; fill: #94a3b8; line-height: 1.4; }
+    .badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; font-weight: 700; fill: #38bdf8; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="680" fill="url(#archBg)"/>
+  <rect x="1" y="1" width="1198" height="678" fill="none" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Top Header Bar -->
+  <g transform="translate(50, 40)">
+    <text x="0" y="0" class="header-title">End-to-End System Architecture</text>
+    <text x="0" y="24" class="header-sub">Modular design decoupling NLP ingestion, vectorization, multi-model consensus, XAI interpretability, and GenAI synthesis.</text>
+  </g>
+
+  <!-- ==================== COLUMN 1: INGESTION ==================== -->
+  <g transform="translate(50, 100)">
+    <!-- Column Frame -->
+    <rect width="190" height="530" rx="10" fill="url(#gradInput)" stroke="#0284c7" stroke-width="1.2" stroke-dasharray="4 2"/>
+    <text x="20" y="32" class="col-title" fill="#38bdf8">1. Ingestion Layer</text>
+
+    <!-- Box 1A: Single Tweet Input -->
+    <g transform="translate(15, 55)">
+      <rect width="160" height="135" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <circle cx="20" cy="22" r="6" fill="#38bdf8"/>
+      <text x="34" y="26" class="box-title">Live Input</text>
+      <text x="12" y="52" class="box-desc">• Interactive text box</text>
+      <text x="12" y="72" class="box-desc">• Sample tweet presets</text>
+      <text x="12" y="92" class="box-desc">• Instant inference</text>
+      <text x="12" y="112" class="box-desc">• Multi-clause support</text>
+    </g>
+
+    <!-- Box 1B: Batch CSV Dataset -->
+    <g transform="translate(15, 210)">
+      <rect width="160" height="145" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <circle cx="20" cy="22" r="6" fill="#0284c7"/>
+      <text x="34" y="26" class="box-title">Batch CSV Corpus</text>
+      <text x="12" y="52" class="box-desc">• Drag-and-drop CSV</text>
+      <text x="12" y="72" class="box-desc">• Auto-column detect</text>
+      <text x="12" y="92" class="box-desc">• Bulk sentiment score</text>
+      <text x="12" y="112" class="box-desc">• One-click CSV export</text>
+      <text x="12" y="130" class="box-desc">• Summary analytics</text>
+    </g>
+
+    <!-- Box 1C: Training Corpus -->
+    <g transform="translate(15, 375)">
+      <rect width="160" height="135" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <circle cx="20" cy="22" r="6" fill="#0369a1"/>
+      <text x="34" y="26" class="box-title">Dataset Artifacts</text>
+      <text x="12" y="52" class="box-desc">• `dataset/twitter.csv`</text>
+      <text x="12" y="72" class="box-desc">• Stratified 80/20 split</text>
+      <text x="12" y="92" class="box-desc">• Balanced classes</text>
+      <text x="12" y="112" class="box-desc">• Retrainable pipeline</text>
+    </g>
+  </g>
+
+  <!-- Connector Line 1 -> 2 -->
+  <path d="M 240 365 L 280 365" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== COLUMN 2: PREPROCESSING & VECTORIZATION ==================== -->
+  <g transform="translate(280, 100)">
+    <rect width="200" height="530" rx="10" fill="url(#gradPreproc)" stroke="#8b5cf6" stroke-width="1.2"/>
+    <text x="20" y="32" class="col-title" fill="#a78bfa">2. NLP Engine</text>
+
+    <!-- Box 2A: Text Cleaner -->
+    <g transform="translate(15, 55)">
+      <rect width="170" height="150" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="14" y="25" class="box-title">Regex Cleaning</text>
+      <text x="14" y="50" class="box-desc">• Strip URLs (http/https)</text>
+      <text x="14" y="70" class="box-desc">• Remove @mentions</text>
+      <text x="14" y="90" class="box-desc">• Hashtag tokenization</text>
+      <text x="14" y="110" class="box-desc">• HTML unescape</text>
+      <text x="14" y="130" class="box-desc">• Contraction expander</text>
+    </g>
+
+    <!-- Box 2B: Emoji & Negation Safeguard -->
+    <g transform="translate(15, 225)">
+      <rect width="170" height="150" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.2"/>
+      <rect x="14" y="10" width="142" height="20" rx="4" fill="#6d28d9" fill-opacity="0.3"/>
+      <text x="20" y="24" class="badge">CRITICAL SAFEGUARD</text>
+      <text x="14" y="50" class="box-title">Emoji &amp; Negations</text>
+      <text x="14" y="72" class="box-desc">• ❤️/🔥 -> "love", "fire"</text>
+      <text x="14" y="92" class="box-desc">• 😡/😭 -> "angry", "crying"</text>
+      <text x="14" y="114" class="box-desc">• Whitelists: not, never,</text>
+      <text x="14" y="132" class="box-desc">  hardly, without, no</text>
+    </g>
+
+    <!-- Box 2C: TF-IDF Vectorizer -->
+    <g transform="translate(15, 395)">
+      <rect width="170" height="115" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="14" y="25" class="box-title">TF-IDF Vectorizer</text>
+      <text x="14" y="50" class="box-desc">• Unigram + Bigram (1,2)</text>
+      <text x="14" y="70" class="box-desc">• Sublinear TF scaling</text>
+      <text x="14" y="90" class="box-desc">• Serialized artifact</text>
+      <text x="14" y="105" class="box-desc">  `tfidf_vectorizer.pkl`</text>
+    </g>
+  </g>
+
+  <!-- Connector Line 2 -> 3 -->
+  <path d="M 480 365 L 520 365" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== COLUMN 3: MULTI-MODEL CLASSIFIERS ==================== -->
+  <g transform="translate(520, 100)">
+    <rect width="195" height="530" rx="10" fill="url(#gradModels)" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="20" y="32" class="col-title" fill="#fbbf24">3. Classifiers</text>
+
+    <!-- Box 3A: Logistic Regression -->
+    <g transform="translate(15, 55)">
+      <rect width="165" height="140" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="14" y="25" class="box-title">Logistic Regression</text>
+      <text x="14" y="44" class="box-desc" fill="#fbbf24" font-weight="700">Acc: 78.33% | F1: 77.97%</text>
+      <text x="14" y="68" class="box-desc">• L2 Regularized (C=1.5)</text>
+      <text x="14" y="88" class="box-desc">• Calibrated posteriors</text>
+      <text x="14" y="108" class="box-desc">• Multi-class Softmax</text>
+      <text x="14" y="128" class="box-desc">• Fast &amp; stable baseline</text>
+    </g>
+
+    <!-- Box 3B: Naive Bayes -->
+    <g transform="translate(15, 215)">
+      <rect width="165" height="140" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="14" y="25" class="box-title">Multinomial NB</text>
+      <text x="14" y="44" class="box-desc" fill="#fbbf24" font-weight="700">Acc: 78.33% | F1: 77.88%</text>
+      <text x="14" y="68" class="box-desc">• Laplace alpha=0.3</text>
+      <text x="14" y="88" class="box-desc">• Word frequency prior</text>
+      <text x="14" y="108" class="box-desc">• Extremely low latency</text>
+      <text x="14" y="128" class="box-desc">• Robust for text classification</text>
+    </g>
+
+    <!-- Box 3C: Linear SVM -->
+    <g transform="translate(15, 375)">
+      <rect width="165" height="135" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="14" y="25" class="box-title">Support Vector (SVM)</text>
+      <text x="14" y="44" class="box-desc" fill="#fbbf24" font-weight="700">Acc: 76.67% | F1: 76.57%</text>
+      <text x="14" y="68" class="box-desc">• Maximal-margin hyperplane</text>
+      <text x="14" y="88" class="box-desc">• Platt scaling enabled</text>
+      <text x="14" y="108" class="box-desc">• High dimensional fit</text>
+      <text x="14" y="126" class="box-desc">• Probabilistic outputs</text>
+    </g>
+  </g>
+
+  <!-- Connector Line 3 -> 4 -->
+  <path d="M 715 365 L 755 365" fill="none" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== COLUMN 4: ADVANCED INTELLIGENCE ENGINES ==================== -->
+  <g transform="translate(755, 100)">
+    <rect width="210" height="530" rx="10" fill="url(#gradModules)" stroke="#10b981" stroke-width="1.2"/>
+    <text x="20" y="32" class="col-title" fill="#34d399">4. Intelligence Core</text>
+
+    <!-- Box 4A: Explainable AI (LIME) -->
+    <g transform="translate(15, 55)">
+      <rect width="180" height="140" rx="8" fill="#1e293b" stroke="#059669" stroke-width="1.2"/>
+      <text x="14" y="24" class="box-title">LIME Explainability</text>
+      <text x="14" y="44" class="box-desc" fill="#34d399">Interpretable Surrogates</text>
+      <text x="14" y="68" class="box-desc">• Text perturbation testing</text>
+      <text x="14" y="88" class="box-desc">• Positive/negative weights</text>
+      <text x="14" y="108" class="box-desc">• Word attribution charts</text>
+      <text x="14" y="128" class="box-desc">• Interactive HTML widget</text>
+    </g>
+
+    <!-- Box 4B: Aspect-Based Sentiment -->
+    <g transform="translate(15, 215)">
+      <rect width="180" height="145" rx="8" fill="#1e293b" stroke="#059669" stroke-width="1.2"/>
+      <text x="14" y="24" class="box-title">Aspect-Level (ABSA)</text>
+      <text x="14" y="44" class="box-desc" fill="#34d399">Clause Decomposition</text>
+      <text x="14" y="68" class="box-desc">• Splits "but", "however", etc.</text>
+      <text x="14" y="88" class="box-desc">• 10 Domain Taxonomies</text>
+      <text x="14" y="108" class="box-desc">  (Battery, Camera, UI, Price)</text>
+      <text x="14" y="128" class="box-desc">• Net Satisfaction Index</text>
+    </g>
+
+    <!-- Box 4C: GenAI Synthesis -->
+    <g transform="translate(15, 380)">
+      <rect width="180" height="130" rx="8" fill="#1e293b" stroke="#059669" stroke-width="1.2"/>
+      <text x="14" y="24" class="box-title">GenAI Executive Brief</text>
+      <text x="14" y="44" class="box-desc" fill="#34d399">Google Gemini API</text>
+      <text x="14" y="68" class="box-desc">• Executive summary briefings</text>
+      <text x="14" y="88" class="box-desc">• Praise &amp; Pain-point analysis</text>
+      <text x="14" y="108" class="box-desc">• Offline heuristic fallback</text>
+      <text x="14" y="124" class="box-desc">• Interactive Q&amp;A on corpus</text>
+    </g>
+  </g>
+
+  <!-- Connector Line 4 -> 5 -->
+  <path d="M 965 365 L 1005 365" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- ==================== COLUMN 5: STREAMLIT DASHBOARD UI ==================== -->
+  <g transform="translate(1005, 100)">
+    <rect width="150" height="530" rx="10" fill="url(#gradUI)" stroke="#ec4899" stroke-width="1.2"/>
+    <text x="15" y="32" class="col-title" fill="#f472b6">5. Dashboard</text>
+
+    <!-- List of 6 pages -->
+    <g transform="translate(12, 55)">
+      <!-- Page 1 -->
+      <rect y="0" width="126" height="55" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="10" y="22" class="box-title" font-size="12">1. Overview</text>
+      <text x="10" y="40" class="box-desc" font-size="10.5">Corpus analytics</text>
+
+      <!-- Page 2 -->
+      <rect y="65" width="126" height="55" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="10" y="87" class="box-title" font-size="12">2. Live Predict</text>
+      <text x="10" y="105" class="box-desc" font-size="10.5">Real-time inference</text>
+
+      <!-- Page 3 -->
+      <rect y="130" width="126" height="60" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="10" y="152" class="box-title" font-size="12">3. Comparison</text>
+      <text x="10" y="170" class="box-desc" font-size="10.5">Confusion &amp; ROC</text>
+
+      <!-- Page 4 -->
+      <rect y="200" width="126" height="60" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="10" y="222" class="box-title" font-size="12">4. ABSA</text>
+      <text x="10" y="240" class="box-desc" font-size="10.5">Aspect breakdown</text>
+
+      <!-- Page 5 -->
+      <rect y="270" width="126" height="60" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="10" y="292" class="box-title" font-size="12">5. LIME (XAI)</text>
+      <text x="10" y="310" class="box-desc" font-size="10.5">Token attribution</text>
+
+      <!-- Page 6 -->
+      <rect y="340" width="126" height="60" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="10" y="362" class="box-title" font-size="12">6. AI Insights</text>
+      <text x="10" y="380" class="box-desc" font-size="10.5">Gemini GenAI</text>
+
+      <!-- Footer Badge -->
+      <rect y="415" width="126" height="42" rx="6" fill="#be185d" fill-opacity="0.3" stroke="#f472b6" stroke-width="1"/>
+      <text x="12" y="440" class="badge" fill="#fbcfe8" font-size="11">Streamlit Multi-Page</text>
+    </g>
+  </g>
+</svg>

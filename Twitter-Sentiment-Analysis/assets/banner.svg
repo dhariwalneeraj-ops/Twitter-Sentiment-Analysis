@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050814"/>
+    </linearGradient>
+
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+
+    <linearGradient id="accentGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-main { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 42px; font-weight: 800; fill: #ffffff; letter-spacing: -0.5px; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 400; fill: #94a3b8; line-height: 1.5; }
+    .tag-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; fill: #38bdf8; letter-spacing: 1.5px; text-transform: uppercase; }
+    .card-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #f1f5f9; }
+    .card-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #94a3b8; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #e2e8f0; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Decorative Grid Lines -->
+  <g stroke="#334155" stroke-width="1" opacity="0.15">
+    <line x1="0" y1="80" x2="1200" y2="80"/>
+    <line x1="0" y1="160" x2="1200" y2="160"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="320" x2="1200" y2="320"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="600" y1="0" x2="600" y2="400"/>
+    <line x1="800" y1="0" x2="800" y2="400"/>
+    <line x1="1000" y1="0" x2="1000" y2="400"/>
+  </g>
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="150" cy="80" r="140" fill="#0284c7" opacity="0.2" filter="url(#glow)"/>
+  <circle cx="1050" cy="180" r="160" fill="#7c3aed" opacity="0.22" filter="url(#glow)"/>
+  <circle cx="650" cy="380" r="120" fill="#059669" opacity="0.15" filter="url(#glow)"/>
+
+  <!-- Outer Border Frame -->
+  <rect x="1" y="1" width="1198" height="398" rx="0" fill="none" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Top Category Chip -->
+  <g transform="translate(60, 42)">
+    <rect width="210" height="28" rx="14" fill="#0369a1" fill-opacity="0.25" stroke="#0284c7" stroke-width="1.2"/>
+    <circle cx="16" cy="14" r="5" fill="#38bdf8"/>
+    <text x="30" y="18" class="tag-text">Enterprise NLP Platform</text>
+  </g>
+
+  <!-- Main Heading -->
+  <text x="60" y="112" class="title-main">AI-Powered Twitter Sentiment Analysis</text>
+  <rect x="60" y="125" width="220" height="4" rx="2" fill="url(#primaryGlow)"/>
+
+  <!-- Subtitle Summary -->
+  <text x="60" y="156" class="subtitle">An end-to-end intelligent NLP intelligence suite combining multi-model machine learning,</text>
+  <text x="60" y="180" class="subtitle">Explainable AI (LIME), Aspect-Based Sentiment Analysis (ABSA), and Gemini GenAI summarization.</text>
+
+  <!-- Tech Badges Bar -->
+  <g transform="translate(60, 204)">
+    <!-- Badge 1: Streamlit -->
+    <rect x="0" y="0" width="110" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <circle cx="14" cy="14" r="4" fill="#ef4444"/>
+    <text x="26" y="18" class="badge-text">Streamlit UI</text>
+
+    <!-- Badge 2: Scikit-Learn -->
+    <rect x="120" y="0" width="120" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <circle cx="134" cy="14" r="4" fill="#f97316"/>
+    <text x="146" y="18" class="badge-text">Scikit-Learn</text>
+
+    <!-- Badge 3: LIME XAI -->
+    <rect x="250" y="0" width="110" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <circle cx="264" cy="14" r="4" fill="#10b981"/>
+    <text x="276" y="18" class="badge-text">LIME (XAI)</text>
+
+    <!-- Badge 4: Google Gemini -->
+    <rect x="370" y="0" width="135" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <circle cx="384" cy="14" r="4" fill="#a855f7"/>
+    <text x="396" y="18" class="badge-text">Gemini GenAI</text>
+
+    <!-- Badge 5: Python 3.10+ -->
+    <rect x="515" y="0" width="115" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <circle cx="529" cy="14" r="4" fill="#38bdf8"/>
+    <text x="541" y="18" class="badge-text">Python 3.10+</text>
+  </g>
+
+  <!-- 4 Feature Highlight Cards at the bottom -->
+  <g transform="translate(60, 252)">
+    <!-- Card 1: Multi-Model ML -->
+    <g transform="translate(0, 0)">
+      <rect width="255" height="114" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.2"/>
+      <rect x="14" y="14" width="34" height="34" rx="8" fill="url(#accentCyan)"/>
+      <!-- Icon: Chart / Model -->
+      <path d="M22 36 L26 30 L30 33 L38 22" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="38" cy="22" r="2" fill="#ffffff"/>
+      <text x="58" y="28" class="card-title">Multi-Model ML</text>
+      <text x="58" y="44" class="card-desc">LR, Naive Bayes &amp; SVM</text>
+      <text x="16" y="74" class="card-desc">78.33% Accuracy benchmark</text>
+      <text x="16" y="92" class="card-desc">with calibrated probabilities.</text>
+    </g>
+
+    <!-- Card 2: Explainable AI -->
+    <g transform="translate(275, 0)">
+      <rect width="255" height="114" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.2"/>
+      <rect x="14" y="14" width="34" height="34" rx="8" fill="url(#accentGreen)"/>
+      <!-- Icon: Eye / Explainability -->
+      <path d="M20 31 C24 25, 38 25, 42 31 C38 37, 24 37, 20 31 Z" fill="none" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="31" cy="31" r="3" fill="#ffffff"/>
+      <text x="58" y="28" class="card-title">Explainable AI (LIME)</text>
+      <text x="58" y="44" class="card-desc">Local Surrogate Analysis</text>
+      <text x="16" y="74" class="card-desc">Feature attribution bar charts</text>
+      <text x="16" y="92" class="card-desc">&amp; interactive HTML heatmaps.</text>
+    </g>
+
+    <!-- Card 3: Aspect-Based ABSA -->
+    <g transform="translate(550, 0)">
+      <rect width="255" height="114" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.2"/>
+      <rect x="14" y="14" width="34" height="34" rx="8" fill="url(#accentPurple)"/>
+      <!-- Icon: Layers / Tag -->
+      <path d="M22 24 L31 18 L40 24 L31 30 Z" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+      <path d="M22 29 L31 35 L40 29" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+      <text x="58" y="28" class="card-title">Aspect-Level ABSA</text>
+      <text x="58" y="44" class="card-desc">Clause-Level Granularity</text>
+      <text x="16" y="74" class="card-desc">Isolates battery, camera, UI,</text>
+      <text x="16" y="92" class="card-desc">support &amp; pricing sentiments.</text>
+    </g>
+
+    <!-- Card 4: Generative AI -->
+    <g transform="translate(825, 0)">
+      <rect width="255" height="114" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.2"/>
+      <rect x="14" y="14" width="34" height="34" rx="8" fill="url(#primaryGlow)"/>
+      <!-- Icon: Sparkle / AI -->
+      <path d="M31 19 L33 27 L41 29 L33 31 L31 39 L29 31 L21 29 L29 27 Z" fill="#ffffff"/>
+      <text x="58" y="28" class="card-title">GenAI Insights</text>
+      <text x="58" y="44" class="card-desc">Google Gemini 2.5 / 1.5</text>
+      <text x="16" y="74" class="card-desc">Automated executive briefings,</text>
+      <text x="16" y="92" class="card-desc">praise root-causes &amp; Q&amp;A.</text>
+    </g>
+  </g>
+</svg>
