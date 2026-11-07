@@ -1,0 +1,4 @@
+Model,Accuracy,Precision (Macro),Recall (Macro),F1-Score (Macro),F1-Score (Weighted)
+Logistic Regression,0.7833,0.7809,0.7833,0.7797,0.7797
+Naive Bayes,0.7833,0.7803,0.7833,0.7788,0.7788
+Support Vector Machine,0.7667,0.7655,0.7667,0.7657,0.7657
